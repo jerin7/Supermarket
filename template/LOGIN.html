@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %} Login Page {% endblock %}
+
+{% block content %}
+    <head> 
+	<title>Sign In</title>
+	<style>
+			.button {
+		background-color: black; 
+		border: none;
+		color: white;
+		padding: 5px 50px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		float: right;
+		border-radius: 100px;
+		}
+		.button:hover {
+			background-color: gray;
+		}
+		#bg{
+			background-image:url(buildings.jpg);
+			background-size: 100%;
+			background-repeat:no-repeat;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position:fixed;
+		}
+			#id1{
+			 border-radius: 5px;
+			 border: 1px solid #BBB5B5;
+			 padding:8px;
+			 width:300px;
+			 }
+			 
+			 #submit{
+			 border-radius: 5px;
+			 border: 1px ;
+			 padding:8px;
+			 width:76px;
+			 height:30px;
+			 background-color:#1881DF;
+			 color:white;
+			 }
+			 
+			 #f1{
+			 color:#D4C1A9;
+			 font-family:times new roman;
+			 font-size:28px;
+			 }
+			 
+			 #f2{
+			 color:#EDE9E4;
+			 font-size:17px;
+			 }
+			
+			 #img1{
+			 height:80px;
+			 width:80px;
+			 }
+			 
+			 #img2{
+			 height:10px;
+			 width:20px;
+			 
+			.container {
+			position: relative;
+			}
+	</style>
+	</head>
+	<body background="{{url_for('static', filename='supermarket.jpg')}}" >
+		<form  action = "#" method= "POST">
+			<table align="center" id="t1" cellpadding=10  width="20%" background="{{url_for('static', filename='gray.jpg')}}" style="background-color:#696969">
+			
+			<tr><td colspan="2"><center><img src="{{url_for('static', filename='signin.png')}}" id=img1></center></td></tr>
+			
+			<tr><td colspan="2"><center><font id=f1>Sign In</font></center></td></tr>
+			<tr></tr><tr></tr>
+			<tr>
+			<td colspan="2"><legend><font id=f2>User ID</font></legend><input type="text" id=id1 name="name" ></td>
+			</tr>
+			<tr>
+			<td colspan="2">
+			<legend><font id=f2>Password</font>&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<img src="{{url_for('static', filename='eye.png')}}" id=img2></legend>
+			<input type="password" name = "password" id=id1>
+			</td>
+			</tr>
+			
+			<tr>
+			<td colspan="2" align="right"><font color=#E2DCD3 size=1>Forgot Password?</font></td>
+			</tr>
+			<tr>
+			<td align="right" ></font><input type="submit" value="Submit" id="submit"></td>
+			</tr>
+			</table>
+		</form>
+	
+     </body>
+{% endblock %}
